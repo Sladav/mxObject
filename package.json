@@ -1,0 +1,31 @@
+{
+  "name": "mxobject",
+  "version": "0.1.0",
+  "description": "Mixable and eXtensible objects in JavaScript",
+  "main": "mxObject.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sladav/mxObject.git"
+  },
+  "keywords": [
+    "extend",
+    "mixin",
+    "class",
+    "prototype",
+    "compose",
+    "object"
+  ],
+  "author": "Steve Ladavich <steve.ladavich@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sladav/mxObject/issues"
+  },
+  "homepage": "https://github.com/Sladav/mxObject#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.0"
+  }
+}
