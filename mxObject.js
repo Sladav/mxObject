@@ -14,9 +14,9 @@
   }
 }(this, function () {'use strict';
 
-  let mxObject = function(init = {}, mixins = [], extensions = []){
-    if(!Array.isArray(mixins)) mixins = [mixins];
-    if(!Array.isArray(extensions)) extensions = [extensions];
+  let mxObject = function(init = {}){
+    mixins = [];
+    extensions = [];
 
     let handler = {
     	get(obj,prop){
@@ -48,7 +48,7 @@
       },
     }
     let mxObj = new Proxy({}, handler)
-    mxObj.extend(init, ...extensions)
+    mxObj.extend(init)
   	return mxObj
   };
 
