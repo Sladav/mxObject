@@ -14,11 +14,26 @@
   }
 }(this, function () {'use strict';
 
-  let mxObject = function(init = {}){
-    mixins = [];
-    extensions = [];
+  function isObj(item){
+    return typeof item === 'object' && item !== null
+  }
 
-    let handler = {
+  function checkMxArgs(argArray, mx){
+    let l = argArray.length;
+    if(l===0) throw new Error(`Provide at least one ${mx}`)
+    argArray.forEach((mixin,ind)=>{
+      if(!isObj(mixin)) throw new TypeError(
+        `Argument${l>1?' '+ind:''} has type ${(mixin===null)?'null':typeof mixin}.
+        ${mx}s must be mxObjects, objects, or arrays`
+      )
+    })
+  }
+
+  const mxObject = function(init = {}){
+    let mixins = [];
+    let extensions = [];
+
+    const handler = {
     	get(obj,prop){
       	switch(true){
           case(prop === '__mixins__'):
@@ -112,14 +127,17 @@
         },[])
     },
     mixin(...args){
+      checkMxArgs(args, 'mixin')
       this.__mixins__.push(...args)
       return this
     },
     insertMixin(index, ...args){
+      checkMxArgs(args, 'mixin')
       this.__mixins__.splice(index, 0, ...args)
       return this
     },
     extend(...args){
+      checkMxArgs(args, 'extension')
       this.__extensions__.push(...args)
       this.__extensions__.filter((v, i, a) => a.slice(i+1).indexOf(v) === -1 )
       Object.assign(this, ...args.reverse())
