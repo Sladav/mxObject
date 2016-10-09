@@ -138,8 +138,8 @@
     },
     extend(...args){
       checkMxArgs(args, 'extension')
-      this.__extensions__.push(...args)
-      this.__extensions__.filter((v, i, a) => a.slice(i+1).indexOf(v) === -1 )
+      this.__extensions__.unshift(...args)
+      this.__extensions__.filter((v, i, a) => a.indexOf(v) === i)
       Object.assign(this, ...args.reverse())
       return this
     },
