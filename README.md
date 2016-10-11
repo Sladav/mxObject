@@ -150,6 +150,39 @@ Extending a mxObject with another mxObject, object, or array simply **copies all
  - Extensions can be overwritten
  - Extensions can be re-extended
 
+**Extension vs. new Constructor( )**
+
+Both extensions and the `new Constructor()` pattern allow you to add a predefined set of properties to an object. For the sake of this comparison, I'm going to ignore the that constructors provide static/live properties via `Constructor.prototype` because with mxObject, that is provided with mixins not extensions. So barring the automatic setting of a prototype, constructor functions...
+
+ - Can set predefined properties with default values  
+	`Constructor(){ this.prop = 'default' }`
+	
+ - Allow you to override default values for a particular instance
+	`Constructor(default = 'default'){ this.prop = default }`
+	
+With extensions, the object's properties are the default values and changes to defaults can be immediately overwritten...
+
+    // set defaults
+    const Extension = {prop: 'default'}
+    const instance = mxObject().extend(Extension)
+vs.
+
+	// set 'custom' defaults by immediately overriding
+	const Extension = {prop: 'default'}
+	const instance = mxObject().extend(Extension, {prop: 'new value'})
+
+Of course, if you want to keep the benefits that Constructor has by way of being a function, you can always extend an object that is returned from a function...
+
+    function makeExtension(someArg1 = 'value', someArg2 = 'another value'){
+	    let closureVariable = 'some value'
+		// ** put some logic here **
+	
+		// return some extension created from function's logic
+		return SomeExt
+	}
+
+	// Call the function when extending into an instance
+	const instance = mxObject().extend( makeExtension() )
 
 ### A Basic Example | *Mixins*
 
@@ -182,8 +215,8 @@ Then let's initialize the mxObject by calling the mxObject factory function and 
 	console.log(mxObj.label)    // 'A'
 	console.log(mxObj.sayA())   // 'A: I'm from A'
 
-	// and we can check to see if A is a mixin of mxObj 
-	//   (this is like Object.prototype.isPrototypeOf())
+	// and we can check to see if A is a mixin of mxObj(this is like 
+	// Object.prototype.isPrototypeOf())
 	console.log(mxObj.isMixinOf(A))  // true
 	
 	...
@@ -205,7 +238,7 @@ If we want to later include behavior from **B**, we can simply mix-in **B**'s be
 	console.log(mxObj.sayA())   // returns 'A: I'm from A'
 	console.log(mxObj.sayB())   // returns 'B: I'm from A'
 	
-	// nevertheless, mxObject is "knows" that B.label exists
+	// nevertheless, mxObject still "knows" that B.label exists
 	console.log(mxObj.getAll('label'))  // returns ['A', 'B']
 	
 	...
@@ -227,17 +260,17 @@ And don't forget, not all Bears are Wizards and not all Wizards are Bears!
 	// A does NOT inherit from B 
 	// B does NOT inherit from A
 	
-	// ERROR: A.sayB is not a function
+	// ERROR: A.sayB is not a function [it's undefined]
 	try{ A.sayB() } catch(err){ console.log(err.message) }
 
-	// ERROR: B.sayA is not a function
+	// ERROR: B.sayA is not a function [it's undefined]
 	try{ B.sayA() } catch(err){ console.log(err.message) } 
 	
 	...
 
 ### A Basic Example | *Extensions*
 
-###### *NOTE: even though this example purely uses extensions, a single mxObject can both mix and extend. For example, `mxObject(&nbsp;&nbsp;).mixin(A).extend(C).mixin(B).extend(D)` mixes in both A and B, and it extends from both C and D*
+###### *NOTE: even though this example purely uses extensions, a single mxObject can both mix and extend. For example, `mxObject().mixin(A).extend(C).mixin(B).extend(D)` mixes in both A and B, and it extends from both C and D*
 
 Let's start with two objects, **C** and **D**. We'll put a data-property and method on each. 
 
