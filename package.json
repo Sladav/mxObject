@@ -26,6 +26,7 @@
   "homepage": "https://github.com/Sladav/mxObject#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.1.0"
+    "mocha": "^3.1.0",
+    "require-all": "^2.0.0"
   }
 }
