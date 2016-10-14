@@ -4,7 +4,7 @@
     } else if (typeof module === 'object' && module.exports) {
         module.exports = factory();
     } else {
-        root.returnExports = factory();
+        root.mxObject = factory();
   }
 }(this, function () {'use strict';
 
