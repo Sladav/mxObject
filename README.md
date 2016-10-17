@@ -6,6 +6,14 @@
 
 ----------
 
+**Try mxObject**
+-------
+
+> **NPM** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `npm install mxobject`
+>
+> **UNPKG** &nbsp;&nbsp; https://unpkg.com/mxobject@0.1.1
+
+
 
 **Overview of JS Inheritance**
 -------
