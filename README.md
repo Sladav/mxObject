@@ -4,20 +4,13 @@
 *Mixable and eXtensible objects in JavaScript*
 
 
-####**Try mxObject**
-=======
-**Try mxObject**
--------
+###**Try mxObject**
 
 > **NPM** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `npm install mxobject`
 >
 > **UNPKG** &nbsp;&nbsp; https://unpkg.com/mxobject@0.1.1
 
-
- **NPM** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `npm install mxobject`
- **UNPKG** &nbsp;&nbsp;&nbsp;&nbsp; https://unpkg.com/mxobject@0.1.1
-
-### **mxObject** is  *Multiple Prototypal Inheritance*
+## **mxObject** is  *Multiple Prototypal Inheritance*
 
 mxObject was created in an attempt to answer the question:
 
