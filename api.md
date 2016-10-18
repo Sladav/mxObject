@@ -16,7 +16,9 @@
  - [mxObject.prototype.extend()](#extend)
  - [mxObject.prototype.isExtensionOf()](#isExtensionOf) 
 
-<details>
+----
+
+<details open>
 <summary>
 <a name="mxObject" href="#mxObject">#</a> **mxObject**( [*init*] ) [<>](https://github.com/Sladav/mxObject/blob/master/mxObject.js#L29 "Source")
 </summary>
@@ -35,7 +37,7 @@ mxObject() returns an ES6 proxy, `mxObj`. The mxObject factory function establis
 ----
 <br />
 
-<details>
+<details open>
 <summary>
 <a name="__type__" href="#__type__">#</a> *mxObj*.**\__type__**[<>](https://github.com/Sladav/mxObject/blob/master/mxObject.js#L113 "Source")
 </summary>
@@ -49,7 +51,7 @@ mxObject.
 <br />
 
 
-<details>
+<details open>
 <summary>
 <a name="mixin" href="#mixin">#</a> *mxObj*.**mixin**( *arguments...* ) [<>](https://github.com/Sladav/mxObject/blob/master/mxObject.js#L113 "Source")
 </summary>
@@ -68,7 +70,7 @@ Push mixins to the mixin array, making mixin properties accessible on the mxObje
 ----
 <br />
 
-<details>
+<details open>
 <summary>
 <a name="insertMixin" href="#insertMixin">#</a> *mxObj*.**insertMixin**( *index*,*arguments...* ) [<>](https://github.com/Sladav/mxObject/blob/master/mxObject.js#L124 "Source")
 </summary>
@@ -88,7 +90,7 @@ insertMixin allows you to mix in objects with a specific priority (the index par
 ----
 <br />
 
-<details>
+<details open>
 <summary>
 <a name="hasMixinProperty" href="#hasMixinProperty">#</a> *mxObj*.**hasMixinProperty**( *prop* ) [<>](https://github.com/Sladav/mxObject/blob/master/mxObject.js#L145 "Source")
 </summary>
@@ -105,7 +107,7 @@ insertMixin allows you to mix in objects with a specific priority (the index par
 ----
 <br />
 
-<details>
+<details open>
 <summary>
 <a name="getMixinProperty" href="#getMixinProperty">#</a> *mxObj*.**getMixinProperty**( *prop* ) [<>](https://github.com/Sladav/mxObject/blob/master/mxObject.js#L159 "Source")
 </summary>
@@ -122,7 +124,7 @@ insertMixin allows you to mix in objects with a specific priority (the index par
 ----
 <br />
 
-<details>
+<details open>
 <summary>
 <a name="isMixinOf" href="#isMixinOf">#</a> *mxObj*.**isMixinOf**( *obj* ) [<>](https://github.com/Sladav/mxObject/blob/master/mxObject.js#L173 "Source")
 </summary>
@@ -139,7 +141,7 @@ insertMixin allows you to mix in objects with a specific priority (the index par
 ----
 <br />
 
-<details>
+<details open>
 <summary>
 <a name="getPriorityOf" href="#getPriorityOf">#</a> *mxObj*.**getPriorityOf**( *obj* ) [<>](https://github.com/Sladav/mxObject/blob/master/mxObject.js#L186 "Source")
 </summary>
@@ -156,7 +158,7 @@ insertMixin allows you to mix in objects with a specific priority (the index par
 ----
 <br />
 
-<details>
+<details open>
 <summary>
 <a name="getAll" href="#getAll">#</a> *mxObj*.**getAll**( *prop* ) [<>](https://github.com/Sladav/mxObject/blob/master/mxObject.js#L201 "Source")
 </summary>
@@ -173,7 +175,7 @@ insertMixin allows you to mix in objects with a specific priority (the index par
 ----
 <br />
 
-<details>
+<details open>
 <summary>
 <a name="getEverything" href="#getEverything">#</a> *mxObj*.**getEverything**( ) [<>](https://github.com/Sladav/mxObject/blob/master/mxObject.js#L224 "Source")
 </summary>
@@ -192,7 +194,7 @@ For each accessible property, return an array of values (primary value and all b
 ----
 <br />
 
-<details>
+<details open>
 <summary>
 <a name="getMixinsDeep" href="#getMixinsDeep">#</a> *mxObj*.**getMixinsDeep**( ) [<>](https://github.com/Sladav/mxObject/blob/master/mxObject.js#L250 "Source")
 </summary>
@@ -211,7 +213,7 @@ Recursively traverse all mixin arrays in mixin tree, pushing values to flattened
 ----
 <br />
 
-<details>
+<details open>
 <summary>
 <a name="getMixinsBroad" href="#getMixinsBroad">#</a> *mxObj*.**getMixinsBroad**( ) [<>](https://github.com/Sladav/mxObject/blob/master/mxObject.js#L275 "Source")
 </summary>
@@ -232,7 +234,7 @@ Recursively traverse all mixin arrays in mixin tree. During tree traversal, trac
 ----
 <br />
 
-<details>
+<details open>
 <summary>
 <a name="extend" href="#extend">#</a> *mxObj*.**extend**( *arguments...* ) [<>](https://github.com/Sladav/mxObject/blob/master/mxObject.js#L301 "Source")
 </summary>
@@ -251,7 +253,7 @@ Copy properties from extension objects onto the mxObject and save references to 
 ----
 <br />
 
-<details>
+<details open>
 <summary>
 <a name="isExtensionOf" href="#isExtensionOf">#</a> *mxObj*.**isExtensionOf**( *obj* ) [<>](https://github.com/Sladav/mxObject/blob/master/mxObject.js#L319 "Source")
 </summary>
