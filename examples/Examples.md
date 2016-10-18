@@ -82,9 +82,9 @@ And don't forget, not all Bears are Wizards and not all Wizards are Bears!
 
 	...
 
-  ### A Basic Example | *Extensions*
+### A Basic Example | *Extensions*
 
-  ###### *NOTE: even though this example purely uses extensions, a single mxObject can both mix and extend. For example, `mxObject().mixin(A).extend(C).mixin(B).extend(D)` mixes in both A and B, and it extends from both C and D*
+###### *NOTE: even though this example purely uses extensions, a single mxObject can both mix and extend. For example, `mxObject().mixin(A).extend(C).mixin(B).extend(D)` mixes in both A and B, and it extends from both C and D*
 
   Let's start with two objects, **C** and **D**. We'll put a data-property and method on each.
 
