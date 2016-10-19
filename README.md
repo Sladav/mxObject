@@ -63,3 +63,12 @@ console.log(Rectangle.width) // returns 10
 ```
 
 If you wanted to achieve the same effect with JS prototypes you would have to either (1) make Button a prototype of Rectangle or (2) make Rectangle a prototype of Button. Neither of those make sense! mxObject allows you to inherit from both without making any connection between Rectangles and Buttons.
+
+
+###Also read...
+
+ - [API Reference](./api.md)
+ - [Detailed Overview](./Detailed-Overview.md)
+ - [Examples](./examples/Examples.md)
+
+
