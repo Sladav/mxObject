@@ -1,6 +1,6 @@
 {
   "name": "mxobject",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Mixable and eXtensible objects in JavaScript",
   "main": "mxObject.js",
   "scripts": {
