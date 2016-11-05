@@ -63,8 +63,7 @@
         return true;
       }
     }
-    let mxObj = new Proxy({}, handler)
-    mxObj.extend(init)
+    let mxObj = new Proxy(init, handler)
     return mxObj
   };
 
@@ -321,7 +320,7 @@
         * @this {mxObject} this
         * @return {mxObject} mx copy of mxobject with same props & mixins
         */
-        clone = function(){
+        clone(){
           const mx = mxObject().extend(this)
           if(this.__mixins__.length) mx.mixin(...this.__mixins__)
           return mx
