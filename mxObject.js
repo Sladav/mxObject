@@ -311,6 +311,20 @@
         */
         isExtensionOf(obj) {
           return this.__extensions__.includes(obj);
+        },
+
+
+        /**
+        * Create a copy of a mixin with the same properties and the same mixins
+        *
+        * @function clone
+        * @this {mxObject} this
+        * @return {mxObject} mx copy of mxobject with same props & mixins
+        */
+        clone = function(){
+          const mx = mxObject().extend(this)
+          if(this.__mixins__.length) mx.mixin(...this.__mixins__)
+          return mx
         }
       }
 
